@@ -6,8 +6,10 @@ import { IrecentUser } from '../../models/cards';
   styleUrls: ['./order-card.component.scss']
 })
 export class OrderCardComponent implements OnInit {
-  @Input() recent_orders !: Array<IrecentUser>
+  @Input() recent_orders !: Array<IrecentUser>;
+
   constructor() { }
   ngOnInit(): void {
+  
   }
 }

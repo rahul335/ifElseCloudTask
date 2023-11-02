@@ -5,26 +5,28 @@ export interface ImainRes {
   }
   
   export interface Icards {
-    header: string
-    sub_header: string
-    value: number
+    header: string;
+    sub_header: string;
+    value: number;
+    iconCode ?: string;
   }
   
   export interface InewUser {
-    id: string
-    picture: string
-    name: string
-    isActive: boolean
-    country: string
-    progress: number
+    id: string;
+    picture: string;
+    name: string;
+    isActive: boolean;
+    country: string;
+    progress: number;
   }
   
   export interface IrecentUser {
-    id: string
-    name: string
-    product: string
-    delivery_date: string
-    status: string
-    tracking_no: string
-    shipping: boolean
+    id: string;
+    name: string;
+    product: string;
+    delivery_date: string;
+    status: string;
+    tracking_no: string;
+    shipping: boolean;
+   
   }
