@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { HttpService } from '../../services/http.service';
 import { Icards, ImainRes, InewUser, IrecentUser } from '../../models/cards';
+import { LoaderService } from '../../services/loader.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -8,6 +9,7 @@ import { Icards, ImainRes, InewUser, IrecentUser } from '../../models/cards';
 })
 export class MainComponent implements OnInit {
   private _httpService = inject(HttpService);
+  private _loaderService = inject(LoaderService);
   new_users !: Array<InewUser>;
   recent_orders !: Array<IrecentUser>;
   top_cards !: Array<Icards>;
@@ -17,7 +19,8 @@ export class MainComponent implements OnInit {
     .subscribe((res : ImainRes) =>{
       this.new_users = res.new_users
       this.recent_orders = res.recent_orders
-      this.top_cards = res.top_cards
+      this.top_cards = res.top_cards;
+      this._loaderService.sendStatus(false)
     })
   }
 }
