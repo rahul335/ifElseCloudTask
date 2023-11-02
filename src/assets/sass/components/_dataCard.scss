@@ -1,0 +1,54 @@
+.d-card-section {
+    align-items: center;
+    margin-bottom: 20px;
+
+    .card {
+        cursor: pointer;
+        background-color: $color-white;
+        border-radius: 5px;
+
+        .card-body {
+            padding: 15px 20px;
+
+            .card-title {
+                margin-bottom: 15px;
+
+                h1 {
+                    color: $color-primary;
+                    font-size: 30px;
+                }
+
+                i {
+                    color: $icons-color;
+                    font-size: 30px;
+                }
+            }
+
+            h4 {
+                color: $text-color-sec;
+            }
+
+            p {
+                color: $icons-color;
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $color-primary;
+
+            .card-body {
+                .card-title {
+                    h1 {
+                        color: $color-white;
+                    }
+                }
+
+                h4 {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.wrapperSection {
+    .sidebar {
+        width: $sidebar-width;
+        height: 100vh;
+        background-color: $color-white;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        .hamburger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            background-color: $color-primary;
+            color: $color-white;
+            cursor: pointer;
+        }
+        ul {
+            li {
+                height: 80px;
+                padding-top: 0.9rem;
+                cursor: pointer;
+                color: $icons-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.active,
+                &:hover,
+                &:focus {
+                    color: $color-primary;
+                }
+            }
+        }
+        i {
+            font-size: 1.2rem;
+        }
+    }
+}

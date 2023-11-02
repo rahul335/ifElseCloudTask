@@ -1,0 +1,37 @@
+<div class="order-card scrollbar style-bar">
+    <table class="w-100">
+        <caption>Recent Order</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Customer</th>
+                <th>Products</th>
+                <th>Delivery Date</th>
+                <th class="pay-info">Status</th>
+                <th>Tracking No#</th>
+                <th class="shipping-info">Shipping</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of recent_orders let i = index">
+                <td>{{01 + i}}</td>
+                <td>{{order.name}}</td>
+                <td>{{order.product}}</td>
+                <td>{{order.delivery_date | date}}</td>
+                <td class="pay-info">
+                    <span class="pay-td paid" [ngClass]="{
+                        'paid': order.status === 'Paid',
+                        'pending': order.status === 'Pending',
+                        'failed': order.status === 'Failed'
+                    }">
+                        {{order.status}}
+                    </span>
+                </td>
+                <td>{{order.tracking_no}}</td>
+                <td class="shipping-info">{{order.shipping ? "Yes" : "No"}}</td>
+                <td><i class="fas fa-times"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

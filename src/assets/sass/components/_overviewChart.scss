@@ -1,0 +1,12 @@
+.overview-chart{
+    height: 400px;
+    background-color: $color-white;
+    margin-top: 20px;
+    padding: 20px;
+    .overview-info{
+        h1{
+            font-size: 15px;
+            color: $text-color-pri;
+        }
+    }
+}

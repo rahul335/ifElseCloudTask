@@ -1,0 +1,8 @@
+<aside>
+    <span class="hamburger"><i class="fas fa-bars"></i></span>
+    <ul>
+        <li [class.active]="i === 0" *ngFor="let link of sidenavArry; let i = index">
+            <i [class]="link"></i>
+        </li>
+    </ul>
+</aside>

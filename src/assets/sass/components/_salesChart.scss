@@ -1,0 +1,26 @@
+.sales-chart {
+    height: 400px;
+    background-color: $color-white;
+    margin-top: 20px;
+    padding: 20px;
+
+    .sales-info {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 15px;
+            color: $text-color-pri;
+        }
+
+        span {
+            color: $text-color-ter;
+        }
+
+        .all-day {
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+        }
+    }
+}

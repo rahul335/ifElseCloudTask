@@ -1,0 +1,23 @@
+<app-top-navbar></app-top-navbar>
+<div class="dashboard">
+    <app-top-data-card [top_cards]="top_cards"></app-top-data-card>
+    <div class="row">
+        <div class="col-8">
+            <app-order-card [recent_orders]="recent_orders"></app-order-card>
+        </div>
+        <div class="col-4">
+            <app-registrations-card [new_users]="new_users"></app-registrations-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-45">
+            <app-sales-chart></app-sales-chart>
+        </div>
+        <div class="col-45">
+            <app-overview-chart></app-overview-chart>
+        </div>
+        <div class="col-3">
+            <app-donut-chart></app-donut-chart>
+        </div>
+    </div>
+</div>

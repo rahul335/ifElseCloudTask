@@ -1,0 +1,18 @@
+<div class="sales-chart">
+    <div class="sales-info">
+        <h1>Sales Statistics</h1>
+       <select class="all-day">
+        <option value="allDays">All Weeks</option>
+        <option value="allMonths">All Months</option>
+        <option value="allDays">All Days</option>
+       </select>
+    </div>
+    <div style="display: block;">
+        <canvas baseChart width="400" height="400"
+          [type]="'line'"
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend">
+        </canvas>
+      </div>
+</div>

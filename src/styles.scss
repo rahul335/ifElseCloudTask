@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@300;400;700&display=swap');
+
+@import './assets/sass/abstract/variabels';
+@import './assets/sass/abstract/mixins';
+@import './assets/sass/abstract/themes';
+
+@import './assets/sass/base/utilities';
+@import './assets/sass/base/typograpy';
+@import './assets/sass/base/grid';
+
+
+@import './assets/sass/components/sidebar';
+@import './assets/sass/components/main';
+@import './assets/sass/components/topNavbar';
+@import './assets/sass/components/dataCard';
+@import './assets/sass/components/orderCard';
+@import './assets/sass/components/registrationCard';
+@import './assets/sass/components/salesChart';
+@import './assets/sass/components/overviewChart';
+@import './assets/sass/components/donutChart';
+
+
+
+
+
+
+
+
+
+
+
+

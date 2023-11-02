@@ -1,0 +1,29 @@
+<div class="registration-list scrollbar style-bar">
+    <h1>New User Registrations</h1>
+    <div>
+        <ul class="user-list d-flex justify-content-between" *ngFor="let user of new_users">
+            <li>
+                <img [src]="user.picture" alt="img"><sub [ngClass]="{active : user.isActive}"></sub>
+            </li>
+            <li>
+                <p>{{user.name}}</p>
+                <p>{{user.country}}</p>
+            </li>
+            <li>
+                <div class="task-progress d-flex justify-content-between">
+                    <progress class="progress" [ngClass]="{
+                        red : user.progress <= 20,
+                        yellow : user.progress > 20 && user.progress <= 30,
+                        blueviolet : user.progress > 30 && user.progress <= 40,
+                        lime : user.progress > 40 && user.progress <= 50,
+                        blue : user.progress > 50
+                    }" max="100" [value]="user.progress"></progress>
+                    <span>{{user.progress}}%</span>
+                </div>
+            </li>
+            <li>
+                <button>More</button>
+            </li>
+        </ul>
+    </div>
+</div>

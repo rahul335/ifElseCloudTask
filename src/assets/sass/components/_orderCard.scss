@@ -1,0 +1,74 @@
+.order-card {
+    height: 400px;
+    &.scrollbar{
+	    background: $bg-color-02;
+	    overflow-y: scroll;
+    }
+    @include scrollbar-mix;
+    table{
+        border-spacing: 0;
+        background-color: $color-white;
+        padding: 25px;
+        caption{
+            text-align: left;
+            background-color: $color-white;
+            padding: 20px;
+            border-bottom: 1px solid $icons-color;
+            font-size: 18px;
+            font-weight: 600;
+            color: $color-black;
+        }
+    th,td {
+        border-bottom: 1px solid $icons-color;
+        text-align: left;
+        padding: 15px;
+        font-size: 12px;
+    }
+    th{
+        color: $table-header-text;
+        &.pay-info{
+            display: flex;
+            justify-content: space-around;
+        }
+        &.shipping-info{
+            text-align: center;
+        }
+    }
+    td{
+        &.shipping-info{
+            text-align: center;
+        }
+        &.pay-info{
+            display: flex;
+            justify-content: space-around;
+        }
+        span{
+            color: $table-body-text;
+            padding: 7px 15px;
+            display: inline-block;
+            border-radius: 5px;
+            text-align: center;
+            &.pay-td {
+                color: $color-white;
+            }
+            &.paid{
+                background-color: $paid-color;
+            }
+            &.pending{
+                background-color: $pending-color;
+            }
+            &.failed{
+                background-color: $failed-color;
+            }
+        }
+    }
+    tbody{
+        td{
+            i{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+}
